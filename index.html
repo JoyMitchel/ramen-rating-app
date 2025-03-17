@@ -3,28 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="styke.css">
+    <title>Ramen Rating App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="index.js"></script>
 </head>
 <body>
     <h1>RAMEN RATING APP</h1>
 
-    <section id="ramen-menu">MENU</section>
+    <div id="ramen-menu"></div>
 
-    <section id="ramen-detail"></section>
+    <div id="ramen-detail">
 
-    <section class="ramen-form">
-        <ul>
-            <div id="ramen-name">Name</div>
-            <div id="restaurant">Restaurant</div>
-            <div id="image-picker">Image</div>
-            <div id="rating">Rating</div>
-            <div id="comment">Comment</div>
-        </ul>
-        <button class="add">Add Ramen</button>
-    </section>
-    
-    <script src="index.js"></script>
+        <h2>Ramen Details</h2>
+        <p id="ramen-name"></p>
+        <p id="ramen-restaurant"></p>
+        <p id="ramen-rating"></p>
+        <p id="ramen-comment"></p>
+    </div>
 
+    <form id="ramen-form">
+        <input type="text" id="name" placeholder="Insert name" required />
+        <input type="text" id="restaurant" placeholder="Restaurant Name" required />
+        <input type="file" id="image" accept="image/*" >
+        <input type="number" id="rating" placeholder="Rating (1-5)" min="1" max="5" required />
+        <textarea type="text" id="comment" placeholder="Add comment"></textarea>
+
+        <button type="submit">Add Ramen</button>
+    </form>
 </body>
 </html>

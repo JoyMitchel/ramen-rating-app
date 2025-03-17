@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap');
+
+:root {
+    --header-font: "Dancing Script", cursive;
+    --body-font: "EB Garamond", serif;
+    --body-color: #335;
+    --primary-color: #f3ecec;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--body-font);
+    background-color: #335;
+    padding: 18px;
+}
+
+h1{
+    font-family: var(--header-font);
+    background-color: var(--primary-color);
+    text-align: center;
+    font-size: 40px;
+    color: var(--body-color);
+    margin-bottom: 20px;
+}
+
+#ramen-menu {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+#ramen-menu img {
+    width: 200px;
+    height: 200px;
+    border-radius: 20px;
+}
+
+
+
+
+
+
+
+
+
