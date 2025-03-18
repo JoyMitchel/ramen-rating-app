@@ -13,7 +13,7 @@ const ramens = [
       const ramenImg = document.createElement("img");
       ramenImg.src = ramen.image;
       ramenImg.alt = ramen.name;
-    
+      ramenImg.dataset.id = ramen.id;
       ramenMenu.appendChild(ramenImg);
     });
   }
@@ -29,39 +29,29 @@ const ramens = [
       document.getElementById("ramen-comment").textContent = `Comment: ${selectedRamen.comment}`;
     }
   }
-  
-  function addSubmitListener() {
-    const form = document.getElementById("new-ramen-form");
-  
-    form.addEventListener("submit", function(event) {
-      event.preventDefault();
 
-      const newRamen = {
-        
-        name: document.getElementById("name").value,
-        restaurant: document.getElementById("restaurant").value,
-        rating: parseInt(document.getElementById("rating").value),
-        comment: document.getElementById("comment").value
-      };
+  function displayRamens(params) {
+    const ramenMenu = document.getElementById ("ramen-menu");
 
-      const ramenMenu = document.getElementById("ramen-menu");
-      const ramenImg = document.createElement("img");
-      ramenImg.src = newRamen.image;
-      ramenImg.alt = newRamen.name;
-      ramenImg.classList.add("ramen-img");
-      ramenImg.dataset.id = newRamen.id;
+    ramens.forEach (ramen =>{
+      const ramenImg = document. createElement("img");
+      ramenImg.src = ramen.image;
+      ramenImg.alt = ramen.name;
+      ramenImg.dataset.id = ramen.id;
+
+
       ramenMenu.appendChild(ramenImg);
-    });
+    })
+  }
 
-    
+  function handleClick(event) {
+    const ramenId = event.target.dataset.id;
+    const selectedRamen = ramens.find(ramen => ramen.id == ramenId);
+    if (selectedRamen) {
+      document.getElementById("ramen-name").textContent = `Name: ${selectedRamen}`;
+      document.getElementById("ramen-restaurant").textContent = `Restaurant: ${selectedRamen}`;
+      document.getElementById("ramen-rating").textContent
+    }
   }
-  
-  function main() {
-    displayRamens();
-    addSubmitListener();
-    document.getElementById("new-ramen-menu").addEventListener("click", handleClick);
-  }
-  
-  document.addEventListener("DOMContentLoaded", main);
-  
+
 
