@@ -26,6 +26,7 @@ h1{
     font-size: 40px;
     color: var(--body-color);
     margin-bottom: 20px;
+    border-radius: 8px;
 }
 
 #ramen-menu {
@@ -39,6 +40,70 @@ h1{
     height: 200px;
     border-radius: 20px;
 }
+
+#ramen-menu img:hover {
+    transform: scale(1.1);
+}
+
+#ramen-detail {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: var(--primary-color);
+    border-radius: 8px;
+    text-align: center;
+}
+
+#ramen-detail p {
+    font-size: 16px;
+    color: #343a40;
+    margin-bottom: 16px;
+}
+
+#new-ramen-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 16px;
+    padding: 24px;
+    border-radius: 8px;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#ramen-form input,
+#new-ramen-form textarea {
+    padding: 12px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+#ramen-form input[type="number"]{
+    max-width: 120px;
+}
+
+#ramen-form button:hover{
+    background-color: #1ebbe2;
+}
+
+#ramen-form-button {
+    padding: 16px;
+    font-size: 16px;
+    background-color: var(--primary-color);
+    border-radius: 8px;
+    border: none;
+}
+
+#new-ramen-form {
+    width: 100%;
+    padding: 16px;
+}
+
+
+
 
 
 
