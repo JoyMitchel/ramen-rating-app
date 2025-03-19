@@ -17,9 +17,7 @@ This is a simple web application that allows users to display ramen dishes, view
 
 ## Setup
 
-1. Clone this repository to your local machine:
-    ``git clone https://github.com/your-username/ramen-review-app.git``
-  
+1. Clone this repository to your local machine
 
 2. Navigate to the project directory:
     ``cd ramen-review-app``
